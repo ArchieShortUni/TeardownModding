@@ -1,0 +1,54 @@
+<group name ="firetruck" pos = "-2.9 0.2 0.4" rot = "0.0 163.0 0.0">
+	<script file = "LEVEL/script/firetruck.lua" pos =" 0 0 0">
+<vehicle name="firetruck" pos="0 0" rot="0 0 0" driven="false" sound="semitruck" spring="0.2" damping="0.4" topspeed="120" acceleration="24" strength="20" antispin="0" antiroll="2" difflock="1" steerassist="0.3" friction="1.8">
+		<body pos="-0.05.35 0.25" rot="0.0 0.0 0.0" dynamic="true">
+
+			<vox pos="0.05 -0.15 -0.25" rot="0 180 0" density="1" strength="3" file="LEVEL/firetruck.vox" object="body">
+				<light pos="-1.15 1.7 6.4" rot="0.0 0 0.0" type="area" size="0.2 0.1" unshadowed="0.3" color ="0.992 0.670 0.286"/>
+				<light pos="-1.15 1.4 6.4" rot="0.0 0 0.0" type="area" size="0.2 0.1" unshadowed="0.3" color ="0.992 0.670 0.286"/>
+				<light pos="1.2 1.4 6.4" rot="0.0 0 0.0" type="area" size="0.2 0.1" unshadowed="0.3" color ="0.992 0.670 0.286"/>
+				<light pos="1.2 1.7 6.4" rot="0.0 0 0.0" type="area" size="0.2 0.1" unshadowed="0.3" color ="0.992 0.670 0.286"/>
+				<location tags="vital" pos="0 0.55 -1.2" rot="-180.0 360.0 -180.0"/>
+				<location tags="player" pos="0.8 2.6 4.4" rot="0.0 0.0 0.0"/>
+			</vox>
+			<wheel name="fl" pos="-0.9 0.1 -4.8" drive="1" steer = "1" travel="-0.3 0.1">				
+				<vox pos="-.2 -0.65 -0.05 " rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="flw"/>
+			</wheel>
+			<wheel name="fr" pos="0.7 0.1 -4.8" drive="1" steer = "1"  travel="-0.3 0.1">				
+				<vox pos="0.5 -0.65 -0.05  " rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="frw"/>
+			</wheel>
+			<wheel name="ml" pos="-0.9  0.1 1.7" drive="0" travel="-0.3 0.1">
+				<vox pos="-.2 -0.65 -0.05 " rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="mlw"/>
+			</wheel>
+			<wheel name="mr" pos="0.7 0.1 1.7" drive="0" travel="-0.3 0.1">			
+				<vox pos="0.5 -0.65 -0.05" rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="mrw"/>
+			</wheel>
+			<wheel name="bl" pos="-0.9  0.1 3.9" drive="1"  travel="-0.3 0.1">			
+				<vox pos="-.2 -0.65 -0.05 "  rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="blw"/>
+			</wheel>
+			<wheel name="br" pos="0.7 0.1 3.9" drive="1"  travel="-0.3 0.1">				
+				<vox pos="0.5 -0.65 -0.05" rot="0.0 180.0 0.0" file="LEVEL/firetruck.vox" object="brw"/>
+			</wheel>
+			<body pos="0.05 0 -0.4" rot="0.0 0.0 0.0" dynamic="true">
+			<vox tags = "laddershape" pos="0 3.4 -.5" rot="0 180 0" density="1" strength="3" file="LEVEL/firetruck.vox" object="ladder">
+				<joint tags="ladder" pos="0.1 0.3 -5.1" rot="0.0 -90.0 0.0" type="hinge" limits="0 40" size = "1" rotstrength = "10"/>
+			</vox>
+		</body>
+		<vox pos="0.05 4 -0.6" rot="0 180 0" density=".5" strength="3" file="LEVEL/firetruck.vox" object="extension" prop = "true">
+			<joint tags = "ext" pos = "0 0 0" rot = "0 0 0 " type = "prismatic"    size = "1"  rotstrength = "10"/>
+			</vox> 
+		</body> 
+	</vehicle>
+	<body dynamic = "true"> 
+	<vox pos = "0.6 1.2 6.25" rot = "0 0 0" density = "1" strength = "3" file="LEVEL/firetruck.vox" object="panel">
+	<joint tags="panel1" pos="0.4 0 0" rot="0.0 -90.0 0.0" type="hinge" limit = "0 0 0"  size = "1"/>
+	<joint tags="panel2" pos="-.3 1.1 0" rot="0.0 -90.0 0.0" type="hinge" limit = "0 0 0" size = "1"/>
+		<voxbox tags ="raise" pos = "0.1 0.4 0" size ="2 1 2" color="1 1 1" rot ="90 0 0"/> 
+		<voxbox tags ="lower" pos = "0.1 0.7 0" size ="2 1 2" color="1 1 1" rot ="90 0 0"/>
+		<voxbox tags ="forward" pos = "-0.3 0.4 0" size ="2 1 2" color="0.988 0.160 0.152" rot ="90 0 0"/> 
+		<voxbox tags ="backward" pos = "-0.3 0.7 0" size ="2 1 2" color="0.988 0.160 0.152" rot ="90 0 0"/> 
+		<voxbox tags ="break" pos = "-0.1 1 0" size ="2 1 2" color="0.705 0.615 0.615" rot ="90 0 0"/> 
+	</vox> 
+	</body>
+	</script>
+	</group> 

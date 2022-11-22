@@ -1,0 +1,39 @@
+
+	<vehicle name="speeder" pos="-2.9 0.2 0.4" rot="0.0 163.0 0.0" driven="false" sound="sportscar" spring="1.2" damping="1.0" topspeed="120" acceleration="12" strength="8" antispin="0" antiroll="0.5" difflock=".1" steerassist="0.3" friction="1.9">
+		
+		<body pos="-0.05002 0.35 0.25" rot="0.0 0.0 0.0" dynamic="true">
+		
+			<vox pos="0.05 -0.15 -0.25" rot="0 180 0" density="2" strength="2" file="LEVEL/speeder.vox" object="body">
+			
+				<light pos="0.4 0.55 -2.1" rot="0.0 180.0 0.0" type="area" size="0.2 0.1" unshadowed="0.3"/>
+				<light pos="-0.3 0.55 -2.1" rot="0.0 180.0 0.0" type="area" size="0.2 0.1" unshadowed="0.3"/>
+				<light pos="0.6 0.3 -1.9" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+				<light pos="-0.5 0.3 -1.9" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+			
+				<location tags="exhaust" pos="1.9 0.5 -1.7" rot="-180.0 360.0 -180.0"/>
+				<location tags="exhaust" pos="-1.8 0.5 -1.7" rot="-180.0 360.0 -180.0"/>
+				<location tags="exhaust" pos="0 1.4 -2.8" rot="-180.0 360.0 -180.0"/>
+				
+				<location tags="vital" pos="0 0.55 -1.2" rot="-180.0 360.0 -180.0"/>
+				
+				<location tags="player" pos="0.4 1.1 0.15" rot="0.0 0.0 0.0"/>
+			</vox>
+			
+			<wheel name="bl" pos="-0.4 0 .8" drive="1" travel="-0.1 0.1">
+				
+				<vox pos="-.2 -.3 -0.05 " rot="0.0 -180.0 0.0" file="LEVEL/speeder.vox" object="wheel_bl"/>
+			</wheel>
+			<wheel name="br" pos="0.4 0 .8" drive="1" travel="-0.1 0.1">
+				<vox pos=".3 -.3 -0.05 "  rot="0 180 0" file="LEVEL/speeder.vox" object="wheel_br"/>
+			</wheel>
+			<wheel name="fl" pos="-0.1 0 -1.7" drive="1" steer="0.7" travel="-0.1 0.1">
+				<vox pos="-.2 -.3 -0.05 " rot="0 180 0" file="LEVEL/speeder.vox" object="wheel_fl"/>
+			</wheel>
+			<wheel name="fr" pos="0.1 0 -1.7" drive="1" steer="0.7" travel="-0.1 0.1">
+				<vox pos=".3 -.3 -0.05 "  rot="0.0 -180.0 0.0" file="LEVEL/speeder.vox" object="wheel_fr"/>
+			</wheel>
+		</body>
+	</vehicle>
+
+
+
